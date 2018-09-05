@@ -1,0 +1,46 @@
+page-notifications {
+    ion-navbar {
+        text-align: center;
+        i {
+            float: left;
+            font-size: 15px;
+        }
+    }
+    ion-content {
+        text-align: center;
+        // margin: 230px 0px 20px 0px;
+        ion-list {
+            ion-item {
+                padding: 5px 20px !important;
+                .message {
+                    padding: 5px;
+                    color: #3B444F;
+                    font-size: 14px;
+                }
+                .time {
+                    padding: 0px 5px;
+                    color: #3B444F;
+                    font-size: 10px;
+                }
+                .notification-footer {
+                    padding: 5px;
+                    color: #045DE9;
+                    font-size: 12px;
+                    img {
+                        float: right;
+                        margin: 0 10px
+                    }
+                }
+            }
+        }
+        .icon {
+            font-size: 50px;
+            color: #3B444F;
+        }
+        p {
+            padding: 20px 50px 20px 50px;
+            line-height: 22px;
+            color: #3B444F;
+        }
+    }
+}

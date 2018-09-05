@@ -1,0 +1,48 @@
+
+<ion-grid>
+    <!-- <ion-row class="onboarding"> -->
+      <ion-col col-12 class="onboarding">
+        
+<ion-slides pager>
+
+    <ion-slide class="single-slide">
+      <div>
+        <img src="../../assets/imgs/1.png" alt="">
+      </div>
+      <h4><b>Read on the go</b></h4>
+      <p>
+        With all your recommended textbooks in your pocket, you can read anytime, anywhere and get ahead
+      </p>
+    </ion-slide>
+  
+    <ion-slide class="single-slide">
+        <div>
+          <img src="../../assets/imgs/2.png" alt="">
+        </div>
+        <h4><b>Prep for Tests & Exams</b></h4>
+        <p>
+            Take quizzes and all your subjects with questions drawn from WAEC, NECO, JAMB and other examinations
+        </p>
+      </ion-slide>
+  
+      <ion-slide class="single-slide">
+          <div>
+            <img src="../../assets/imgs/3.png" alt="">
+          </div>
+          <h4><b>Take Notes & Revise</b></h4>
+          <p>
+            Save notes on formulas, definitions and much more. That way, you can revise faster and recall easier
+          </p>
+        </ion-slide>
+  
+  </ion-slides>
+      </ion-col>
+    <!-- </ion-row> -->
+    <ion-row class="buttons block">
+        <button ion-button round (click)="toSignup()"><b>Get Started</b></button>
+    </ion-row>
+    <ion-row class="buttons outline">
+        <button ion-button round outline (click)="toLogin()"><b>Login</b></button>
+    </ion-row>
+  </ion-grid>
+      

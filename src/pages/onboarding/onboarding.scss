@@ -1,0 +1,38 @@
+page-onboarding {
+    height: 100% !important;
+    background-color: $light-background;
+    color: $light-text-color;
+    ion-grid {
+        .onboarding {
+            // background-color: bisque;
+            // height: 20% !important;
+            padding: 120px 0 0 0
+        }
+        .single-slide {
+            padding: 0 45px 0 45px;
+            h4 {
+                margin: 30px 0 0 0
+            }
+            p {
+                margin: 20px 0 20px 0;
+                line-height: 23px;
+                font-size:16px;
+                padding: 0 0 20px 0
+            }
+        }
+        .swiper-pagination-bullet-active {
+            width:50px;
+            border-radius: 10px;
+            // background-color: #09C6F9;
+            margin: 0 12px !important
+        }
+        .swiper-pagination-bullet {
+            width:30px;
+            height: 4px;
+            border-radius: 3px;
+            background-color: #045DE9;
+            margin: 0 12px !important
+        }
+    }
+}
+

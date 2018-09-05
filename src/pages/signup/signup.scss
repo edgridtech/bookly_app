@@ -1,0 +1,161 @@
+page-signup {
+    background-color: $light-background;
+    color:$light-text-color;
+    ion-content {
+        background-color: $light-background;
+        color:$light-text-color;
+        ion-slides {
+            background-color: $light-background;
+            color:$light-text-color;
+            // height: 90%;
+            ion-slide {
+                background-color: $light-background;
+                color:$light-text-color;
+    // padding: 100px 40px 20px 40px !important;
+                // background-color: blanchedalmond;
+                    .manualSlide {
+                        transition-duration: 0ms;
+                        transform: translate3D(-379px,0 0);
+                        margin-left: -379px;
+                    }
+                    .top-section {
+                            // background-color: bisque;
+                        .top-step-bar {
+                            width: 50%;
+                            margin-left: 25%;
+                            transition-duration: 0ms;
+                            // margin-top: 54px;
+                            // height: 20px;
+                            .first-step {
+                                width: 40%;
+                                height: 5px;
+                                padding: 0px 30px;
+                                background-color: #045DE9;
+                                // float: left;
+                                margin: 0;
+                            }
+                            .second-step {
+                                width: 40%;
+                                height: 5px;
+                                padding: 0px 30px;
+                                // float: right;
+                                background-color:rgba(4, 93, 233, 0.25);
+                                margin: 0;
+                            }
+                        }
+                        h3 {
+                            padding: 30px 0 0 0;
+                            text-align: center;
+                            width: 100%;
+                        }
+                        p {
+                            // padding: 10px 0 0 0;
+                            text-align: center;
+                            width: 100%;
+                            margin-top: 0px
+                        }
+                    }
+                    .inputs {
+                        padding: 0px 30px;
+                        .subjectButton {
+                            padding: 15px 30px;
+                            background-color: #fff;
+                            border-radius: 30px;
+                            border: 1px solid #bdccd5;
+                            margin: 15px 0 0 0
+                        }
+                        .EnglishStyle {
+                            background-color: #7B4397;
+                            border: 1px solid #7B4397;
+                            color: #fff
+
+                        }
+                        .LitStyle {
+                            background-color: #330867;
+                            border: 1px solid #330867;
+                            color: #fff
+                        }
+                        .ChemStyle {
+                            background-color: #2A5298;
+                            border: 1px solid #2A5298;
+                            color: #fff
+                        }
+                        .BioStyle {
+                            background-color: #667EEA;
+                            border: 1px solid #667EEA;
+                            color: #fff
+                        }
+                        .CivStyle {
+                            background-color: #D7816A;
+                            border: 1px solid #D7816A;
+                            color: #fff
+                        }
+                        .AgricStyle {
+                            background-color: #834D9B;
+                            border: 1px solid #834D9B;
+                            color: #fff
+                        }
+                        .MathStyle {
+                            background-color: #606C88;
+                            border: 1px solid #606C88;
+                            color: #fff
+                        }
+                        .GeoStyle {
+                            background-color: #52C234;
+                            border: 1px solid #52C234;
+                            color: #fff
+                        }
+                        .PhyStyle {
+                            background-color: #A73737;
+                            border: 1px solid #A73737;
+                            color: #fff
+                        }
+                        .CommStyle {
+                            background-color: #045DE9;
+                            border: 1px solid #045DE9;
+                            color: #fff
+                        }
+                        .EcoStyle {
+                            background-color: #A71D31;
+                            border: 1px solid #A71D31;
+                            color: #fff
+                        }
+                    }
+                    select {
+                        background-color: $light-background;
+                        border: 1px solid  $light-input-border;
+                        color:$light-text-color;
+                    }
+                    .normal-input {
+                        height: 54px;
+                        width: 100%;
+                        padding: 0 20px 0 20px;
+                        border-radius: 969px;
+                        background-color: $light-background;
+                        color:$light-text-color;
+                        border: 1px solid  $light-input-border;
+                        margin: 30px 0 0 0
+                    }
+                    select {
+                        height: 54px;
+                        width: 100%;
+                        padding: 0 50px 0 20px;
+                        border-radius: 969px;
+                        border: 1px solid #DBE6EC;
+                        margin: 30px 0 0 0;
+                        option {
+                            width: 50%
+                        }
+                    }
+                }
+            }
+        }   
+        .footer-text {
+            color: #67747C;
+            text-align: center;
+            margin: 20px 0
+        }
+        .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+            display: none
+        }
+}

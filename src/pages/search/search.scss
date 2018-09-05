@@ -1,0 +1,28 @@
+page-search {
+    ion-navbar {
+        color: #b1bece;
+        ion-col {
+            .back {
+                width: 10%
+            }
+            input {
+                width: 80%;
+                margin-left: 10%;
+                height: 30px;
+                border: 1px solid #b1bece;
+                padding: 15px 15px;
+                border-radius: 20px
+            }
+        }
+        .close {
+            margin-left: -25px;
+            width: 10%;
+        }
+    }
+    ion-tabs {
+        background-color: red;
+        margin: 70px 0;
+        height: 50px;
+        color: black
+    }
+}

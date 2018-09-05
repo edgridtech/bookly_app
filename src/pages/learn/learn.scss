@@ -1,0 +1,81 @@
+page-learn {
+    padding: 16px;
+    ion-content {
+        margin: 55px 0 0 0;
+        .tab-top-title{
+            color: #3B444F;
+            font-size: 16px;
+            margin: 15px 0 0 0;
+            margin: 15px 12px 0 12px;
+            .view-all {
+                color: #045DE9;
+                font-size: 12px;
+                margin-top: -15px;
+                width: 50%;
+                line-height: 10px;
+                width: 100%;
+                text-align: right;
+            }
+        }
+        ion-row {
+            padding: 12px !important;
+            ion-slides {
+                margin: -10px 0 0 0;
+                padding: 0 15px;
+            }
+            ion-slide {
+                height: 60px;
+                margin: 20px;
+                margin: 0 40px 0 0;
+            }
+            .prev-subject{
+                height: 70px;
+                width: 90%;
+                text-align: center;
+                font-size: 12px !important;
+                color: #fff;
+                border-radius: 8px;
+            }
+            .red-sub {
+                background-color: #667EEA
+            }
+            .blue-sub {
+                background-color: #30CFD0
+            }
+        }
+        .subjects {
+            margin: 0px 0 55px 0;
+            ion-col {
+                margin: -10px 0 0 0;
+                padding: 10px !important;
+                .subject-box {
+                    border-radius: 10px !important;
+                    height: 120px;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    img {
+                        position: relative;
+                        width: 100% !important;
+                        height: 120px;
+                        z-index: 2;
+                    }
+                    .subject-text {
+                        position: relative;
+                        z-index: 3;
+                        color: #fff;
+                        height: 120px;
+                        width: 100%;
+                        text-align: center;
+                        margin-top: -75px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        // OVERRIDES 
+        .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+            display: none !important;
+        }
+    }
+}

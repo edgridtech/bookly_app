@@ -1,0 +1,19 @@
+page-book-search-results {
+    overflow-y: auto;
+    div  {
+        margin: 60px 0 0 0 ;
+        overflow: auto;
+        // background-color: aqua
+    }
+    ion-row {
+        padding: 30px;
+        overflow: auto;
+        ion-col {
+            text-align: center;
+            img {
+                width: 80%;
+                // margin-left: 5%
+            }
+        }
+    }
+}

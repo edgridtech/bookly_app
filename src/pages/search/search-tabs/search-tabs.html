@@ -1,0 +1,19 @@
+
+<ion-header>
+        <ion-navbar>
+          <ion-col>
+            <span class="back"><i class="fa fa-angle-left"></i></span>
+            <span><input type="text" autofocus (keyup.enter)="search()"></span>
+            <span class="close"><i class="fa fa-times"></i></span>
+          </ion-col>
+        </ion-navbar>
+      </ion-header>
+    <ion-tabs tabsPlacement="top" style="margin-top: 50px;z-index: 1400;">
+        <ion-tab tabTitle="Topics" [root]="tab1Root"></ion-tab>
+        <ion-tab tabTitle="TextBooks" [root]="tab2Root"></ion-tab>
+        <ion-tab tabTitle="Notes" [root]="tab3Root"></ion-tab>
+    </ion-tabs>
+<!-- <ion-content>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vel maxime ut aliquid esse labore incidunt, distinctio repudiandae. Perferendis facere ab autem mollitia consequatur modi ullam nobis quasi veniam illo.
+</ion-content> -->
+

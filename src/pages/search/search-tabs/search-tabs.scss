@@ -1,0 +1,35 @@
+search-tabs {
+    ion-navbar {
+        color: #b1bece;
+        ion-col {
+            .back {
+                width: 10%
+            }
+            input {
+                width: 80%;
+                margin-left: 10%;
+                height: 30px;
+                border: 1px solid #b1bece;
+                padding: 15px 0;
+                border-radius: 20px
+            }
+        }
+        .close {
+            margin-left: -25px;
+            width: 10%;
+        }
+    }
+    .tabs-md .tab-button[aria-selected=true] {
+        color: #045DE9 !important;
+        border-bottom: 2px solid #045DE9 !important
+    }
+    .tabbar {
+        box-shadow: 3px 3px 3px #f7f7f7 !important;
+        // font-size: 15px !important;
+        // font-weight: 600
+    }
+    .tabs-md .tab-button {
+        font-size: 15px !important;
+        font-weight: 600 !important
+    }
+}

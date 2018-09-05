@@ -14,3 +14,170 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import "https://fonts.googleapis.com/css?family=Rubik";
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+* {
+    font-family: 'Rubik', sans-serif !important;
+}
+.fa {
+    font-family: FontAwesome !important;
+}
+ion-icon {
+    font-family: "Ionicons" !important;
+}
+$dark-background:  #222829;
+$dark-text-color: #fff;
+$dark-inout-border: #67747C;
+
+$light-background: #fff;
+$light-text-color: #222829;
+$light-input-border: #DBE6EC;
+
+// my buttons
+.button-md {
+    text-transform: none !important;
+}
+.block {
+    // height: 30% !important;
+    // background-color: aquamarine;
+    text-align: center;
+    padding: 30px 0 0px 0;
+    button {
+        height: 45px;
+        width: 60%;
+        margin-left: 20%;
+        background-image: linear-gradient(#09C6F9, #045DE9);
+    }
+}
+.outline {
+    // height: 30% !important;
+    // background-color: aquamarine;
+    text-align: center;
+    padding: 30px 0 0px 0;
+    button {
+        height: 45px;
+        width: 60%;
+        margin-left: 20%;
+        background-color: $light-background;
+        color: #045DE9
+        // background-image: linear-gradient(#09C6F9, #045DE9);
+    }
+}
+// My inputs
+.append-input-rounded {
+    height: 54px;
+    width: 75%;
+    padding: 0 20px 0 20px;
+    border-radius: 0 969px 967px 0;
+    border: 1px solid  $light-input-border;
+    background-color: $light-background;
+    font-size: 15px;
+    color: $light-text-color;
+    float: right;
+    margin: 30px 0 0 0
+}
+.append-button-rounded {
+    height: 54px;
+    width: 25%;
+    float: left;
+    margin: 30px 0 0 0;
+    background-color: $light-input-border;
+    border: 1px solid  $light-input-border;
+    font-size: 15px;
+    color: #000;
+    border-radius: 969px 0 0  969px;
+    // padding: 0 20px 0 20px;
+}
+.prepend-input-rounded {
+    height: 54px;
+    width: 75%;
+    padding: 0 20px 0 20px;
+    border-radius: 969px 0 0 967px;
+    background-color: $light-background;
+    font-size: 15px;
+    color: $light-text-color;
+    border: 1px solid  $light-input-border;
+    border-right: 0 !important;
+    float: left;
+    margin: 30px 0 0 0
+}
+.prepend-button-rounded-transparent {
+    height: 54px;
+    width: 25%;
+    float: right;
+    margin: 30px 0 0 0;
+    background-color: $light-background;
+    border: 1px solid $light-input-border;
+    border-left: 0 !important;
+    font-size: 20px;
+    color: $light-text-color;
+    border-radius: 0 969px 969px 0;
+    // padding: 0 20px 0 20px;
+    i {
+        color: $light-text-color
+    }
+}
+// TAB OVERRIDES
+.tabs-md .tabbar {
+    background-color:#fff !important;
+    border: 0 !important;
+    box-shadow: 1px 1px 1px rgba(103, 116, 124, 0.05)
+}
+.tabs-md .tab-button {
+    color: #99A9B3 !important;
+    font-size: 14px !important;
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: #045DE9
+}
+.tabs-md .tab-button-icon {
+    color: #99A9B3
+}
+.toolbar-md {
+    padding: 5px 20px !important
+}
+ion-header {
+    z-index: 100;
+}
+//NAVBAR
+ion-navbar {
+    box-shadow: 2px 2px 2px 2px #f7f7f7 !important
+}
+.toolbar-background-md {
+    background-color: #fff
+}
+
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none !important
+}
+.back-button.show-back-button {
+    display: none !important
+}
+// ion-nav, ion-tab, ion-tabs {
+//     overflow: auto !important;
+// }
+ion-navbar {
+    color: #3B444F;
+    i {
+        font-size: 16px;
+    }
+}
+.search {
+    float: left;
+    // width: 33%;
+    text-align: left;
+}
+.tab-title {
+    font-size: 20px;
+    text-align: center
+}
+.notification {
+    float: right;
+    // width: 33%;
+    text-align: right;
+}
+// TABS 
+.tabbar {
+    opacity: 10000000000 !important;
+    box-shadow: 5px 5px 5px 5px #ececec !important
+}
