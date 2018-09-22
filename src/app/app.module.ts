@@ -26,6 +26,10 @@ import { TopicsSearchResultsPage } from '../pages/search/topics-search-results/t
 import { NotesSearchResultsPage } from '../pages/search/notes-search-results/notes-search-results'
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { GlobalProvider } from '../providers/global/global';
+import { SingleTopicPage } from '../pages/single-topic/single-topic';
+import { TopicTextPage } from '../pages/topic-text/topic-text';
+import { TopicVideoPage } from '../pages/topic-video/topic-video';
+import { TopicQuizPage } from '../pages/topic-quiz/topic-quiz';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,11 @@ import { GlobalProvider } from '../providers/global/global';
     SearchTabsPage,
     BooksSearchResultsPage,
     TopicsSearchResultsPage,
-    NotesSearchResultsPage
+    NotesSearchResultsPage,
+    SingleTopicPage,
+    TopicTextPage,
+    TopicVideoPage,
+    TopicQuizPage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +80,11 @@ import { GlobalProvider } from '../providers/global/global';
     SearchTabsPage,
     BooksSearchResultsPage,
     TopicsSearchResultsPage,
-    NotesSearchResultsPage
+    NotesSearchResultsPage,
+    SingleTopicPage,
+    TopicTextPage,
+    TopicVideoPage,
+    TopicQuizPage
     
   ],
   providers: [

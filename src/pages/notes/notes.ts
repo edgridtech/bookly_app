@@ -17,12 +17,12 @@ export class NotesPage {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad NotificationsPage');
-    this.globals.headerOpen = true
+    this.globals.headerOpen = false
     console.log(this.globals.headerOpen)
   }
   ionViewWillEnter() {
     console.log('ionViewWillEnter');
-    this.globals.headerOpen = true
+    this.globals.headerOpen = false
     console.log(this.globals.headerOpen)
 
   }

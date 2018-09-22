@@ -1,0 +1,134 @@
+<!--
+  Generated template for the SingleTopicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="my-nav">
+    <ion-row>
+      <ion-col col-2 class="search" (click)="goBack()">
+        <img src="../../assets/imgs/back-dark.svg" alt="" width="8px">
+      </ion-col>
+      <ion-col col-8 class="tab-title" >
+        <b>{{heading}}</b>
+      </ion-col>
+      <ion-col col-2 class="notification">
+          <!-- <i class="fa fa-download"></i> -->
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-row *ngFor="let video of videos; let i-index" (click)="search()">
+    <ion-col col-12 class="single-video">
+      <!-- <span *ngIf="beforeSearch" >
+        <div class="my-overlay"></div>
+        <img [src]='topic.backImg' alt="">
+      </span> -->
+      <span>
+        <iframe width="120" height="150" allowfullscreen width="100%" [src]="sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + video.id.videoId + '')"> </iframe>
+      </span>
+    </ion-col>
+    <span class="vid-title">
+      <b>{{video.snippet.title}}</b>
+    </span>
+  </ion-row>
+  <ion-row class="btm-push"></ion-row>
+  <!-- <ul>
+    <li class="active" (click)="toText()">
+      <span>
+        <ion-row>
+            <ion-col col-2>
+              <i class="fa fa-file"></i>
+            </ion-col>
+            <ion-col col-10 class="topic">
+              What is reproduction? <br>
+              <span class="duration">
+                02:00 mins
+              </span>
+             </ion-col>
+        </ion-row>
+      </span>
+    </li>
+    <li class="inactive">
+      <span>
+        <ion-row>
+            <ion-col col-2>
+              <i class="fa fa-file"></i>
+            </ion-col>
+            <ion-col col-10 class="topic">
+              Types of reproduction? <br>
+              <span class="duration">
+                03:30 mins
+              </span>
+             </ion-col>
+        </ion-row>
+      </span>
+    </li>
+    <li>
+      <span class="inactive">
+        <ion-row>
+            <ion-col col-2>
+              <i class="fa fa-youtube"></i>
+            </ion-col>
+            <ion-col col-10 class="topic">
+              Reproduction in Plants <br>
+              <span class="duration">
+                02:00 mins
+              </span>
+             </ion-col>
+        </ion-row>
+      </span>
+    </li>
+    <li class="inactive">
+      <span>
+        <ion-row>
+            <ion-col col-2>
+              <i class="fa fa-file"></i>
+            </ion-col>
+            <ion-col col-10 class="topic">
+              Types of reproduction? <br>
+              <span class="duration">
+                03:30 mins
+              </span>
+             </ion-col>
+        </ion-row>
+      </span>
+    </li>
+    <li>
+      <span class="inactive">
+        <ion-row>
+            <ion-col col-2>
+              <i class="fa fa-youtube"></i>
+            </ion-col>
+            <ion-col col-10 class="topic">
+              Reproduction in Plants <br>
+              <span class="duration">
+                02:00 mins
+              </span>
+             </ion-col>
+        </ion-row>
+      </span>
+    </li>
+    <li>
+      <span class="inactive">
+        <ion-row>
+            <ion-col col-2>
+              <i class="fa fa-comments"></i>
+            </ion-col>
+            <ion-col col-10 class="topic">
+              Quiz 1 <br>
+              <span class="duration">
+                02:00 mins
+              </span>
+             </ion-col>
+        </ion-row>
+      </span>
+    </li>
+  </ul> -->
+</ion-content>

@@ -1,7 +1,15 @@
 page-notes {
     ion-header {
         z-index: 10000000000000000000000000 !important;
-        margin: 30px 0 0 0;
+        // margin: 30px 0 0 0;
+        ion-navbar {
+            .tab-title {
+                text-align: center
+            }
+            .add {
+                text-align: right
+            }
+        }
     }
     .empty {
         margin: 170px 0 0 0 ;
@@ -17,7 +25,7 @@ page-notes {
         }
     }
     .not-empty {
-        margin-top: 60px;
+        margin-top: 40px;
         // background-color: aqua;
         ion-row {
             padding: 10px;

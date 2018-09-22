@@ -1,9 +1,16 @@
 <ion-header>
     <ion-navbar>
-      <ion-col>
-        <span class="back"><i class="fa fa-angle-left"></i></span>
+      <ion-col class="back" col-2 (click)="goBack()">
+        <span>
+              <img src="../../assets/imgs/back-dark.svg" width="8px" alt="">
+            </span>
+      </ion-col>
+      <ion-col col-10>
         <span><input type="text" autofocus (keyup.enter)="search()"></span>
         <span class="close"><i class="fa fa-times"></i></span>
+      </ion-col>
+      <ion-col col-2>
+
       </ion-col>
     </ion-navbar>
   </ion-header>

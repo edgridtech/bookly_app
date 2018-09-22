@@ -1,13 +1,13 @@
 <ion-header *ngIf="globals.headerOpen">
     <ion-navbar>
       <ion-row>
-      <ion-col col="3" class="search">
+      <ion-col col-2 class="search">
         <i class="fa fa-search" (click)="toSearch()"></i>
       </ion-col>
-      <ion-col class="tab-title" >
+      <ion-col col-8 class="tab-title" >
         <b>{{globals.navTitle}}</b>
       </ion-col>
-      <ion-col class="notification">
+      <ion-col col-2 class="notification">
           <i class="fa fa-bell" (click)="toNotifications()"></i>
       </ion-col>
       </ion-row>

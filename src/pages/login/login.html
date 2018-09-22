@@ -24,11 +24,11 @@
     </ion-row>
   <!-- <ion-row> -->
   <div class="inputs">
-    <span><button class="append-button-rounded">+234</button></span><span><input type="text" placeholder="What is your phone number?" class="append-input-rounded"><br></span>  
+    <span><button class="append-button-rounded">+234</button></span><span><input type="tel" placeholder="What is your phone number?" class="append-input-rounded"><br></span>  
     <span><button class="prepend-button-rounded-transparent"  (click)="togglePassword()"><i class="fa fa-eye"></i></button></span><span><input [type]="textType" placeholder="Enter your password" class="prepend-input-rounded"><br></span> 
   </div>
   <ion-grid>
-      <span class="forgot-text" (click)="toForgot()"><b>Forgot your password?</b></span> 
+    <span class="forgot-text" (click)="toForgot()"><b>Forgot your password?</b></span> 
     <ion-row class="buttons block">
         <button ion-button round (click)="login()"><b>Login</b></button>
     </ion-row>

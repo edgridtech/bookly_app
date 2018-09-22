@@ -26,4 +26,7 @@ export class SearchPage {
   search () {
     this.navCtrl.push(SearchTabsPage)
   }
+  goBack(){
+    this.navCtrl.pop()
+  }
 }

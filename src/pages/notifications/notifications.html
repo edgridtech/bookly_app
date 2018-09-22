@@ -1,11 +1,12 @@
 <ion-header>
     <ion-navbar>
-      <ion-col col->
-        <i class="fa fa-angle-left"></i>
+      <ion-col col-2 (click)="goBack()">
+        <img src="../../assets/imgs/back-dark.svg" alt="">
       </ion-col>
-      <ion-col class="tab-title" >
+      <ion-col col-10 class="tab-title" >
         <b>Notifications</b>
       </ion-col>
+      <ion-col col-2></ion-col>
     </ion-navbar>
   </ion-header>
   <!-- <ion-content *ngIf="noNotification">

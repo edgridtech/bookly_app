@@ -1,0 +1,22 @@
+page-topic-text {
+    ion-content {
+        .video {
+            padding:20px
+        }
+        .texts {
+            padding: 20px !important;
+        }
+        .heading {
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+            font-size: 17px;
+            color: #3B444F;
+        }
+        .text {
+            color: #67747C;
+            line-height: 23px;
+            font-size: 15px;
+        }
+    }
+}

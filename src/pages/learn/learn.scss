@@ -1,10 +1,10 @@
 page-learn {
     padding: 16px;
     ion-content {
-        margin: 55px 0 0 0;
+        margin: 45px 0 0 0;
         .tab-top-title{
             color: #3B444F;
-            font-size: 16px;
+            font-size: 13px;
             margin: 15px 0 0 0;
             margin: 15px 12px 0 12px;
             .view-all {
@@ -27,14 +27,16 @@ page-learn {
                 height: 60px;
                 margin: 20px;
                 margin: 0 40px 0 0;
+                margin-right: 5px !important;
+                width: 140.182px !important
             }
             .prev-subject{
-                height: 70px;
-                width: 90%;
+                height: 40px;
+                width: 99%;
                 text-align: center;
-                font-size: 12px !important;
+                font-size: 11px !important;
                 color: #fff;
-                border-radius: 8px;
+                border-radius: 5px;
             }
             .red-sub {
                 background-color: #667EEA
@@ -45,11 +47,15 @@ page-learn {
         }
         .subjects {
             margin: 0px 0 55px 0;
+            .subj-title {
+                font-size: 13px;
+                color: #3B444F;
+            }
             ion-col {
                 margin: -10px 0 0 0;
                 padding: 10px !important;
                 .subject-box {
-                    border-radius: 10px !important;
+                    border-radius: 6px !important;
                     height: 120px;
                     margin: 0;
                     padding: 0;

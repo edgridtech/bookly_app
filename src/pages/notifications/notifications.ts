@@ -35,4 +35,8 @@ export class NotificationsPage {
     console.log(this.globals.headerOpen)
 
   }
+
+  goBack() {
+    this.navCtrl.pop()
+  }
 }

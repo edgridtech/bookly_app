@@ -45,6 +45,7 @@ page-login {
             }
         }
         .inputs {
+            margin: 45px 0 0 0;
             padding: 0px 30px;
         }
         .normal-input {
@@ -71,12 +72,15 @@ page-login {
             width: 100%;
             color: #67747C;
             text-align: right;
-            margin: 40px 0
+            margin: 10px 0 45px 0
+        }
+        .buttons {
+            margin-top:-45px;
         }
         .footer-text {
             color: #67747C;
             text-align: center;
-            margin: 20px 0
+            margin: 15px 0 10px 0
         }
     }
 }

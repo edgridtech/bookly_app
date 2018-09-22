@@ -16,8 +16,12 @@
 // automatically applied to the <body> element in the app.
 @import "https://fonts.googleapis.com/css?family=Rubik";
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@font-face {
+    font-family: calibre;
+    src: url(../assets/font/calibre-regular-webfont.ttf)
+}
 * {
-    font-family: 'Rubik', sans-serif !important;
+    font-family: 'calibre', sans-serif !important;
 }
 .fa {
     font-family: FontAwesome !important;

@@ -3,7 +3,9 @@ page-search {
         color: #b1bece;
         ion-col {
             .back {
-                width: 10%
+                // width: 25%;
+                height: 100%;
+                background-color: red
             }
             input {
                 width: 80%;

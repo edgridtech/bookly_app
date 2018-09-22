@@ -43,79 +43,13 @@
     </ion-slides>
   </ion-row>
   <ion-row class="subjects">
-      <ion-row col-12 class="">
+      <ion-row col-12 class="subj-title">
         <b>Your Subjects</b>
       </ion-row>
-    <ion-col col-6 (click)="toSubject()">
+    <ion-col *ngFor="let subject of subjects; let i = index" col-6 (click)="toSubject(i)">
      <div class="subject-box">
-        <img src="../../assets/imgs//maths.png" alt="">
-        <div class="subject-text">Mathematics</div>
-     </div>
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-      <img src="../../assets/imgs/eng.png" alt=""> 
-      <div class="subject-text">English Language</div>  
-      </div>   
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-     <img src="../../assets/imgs/econs.png" alt="">
-     <div class="subject-text">Economics</div>
-     </div>
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-      <img src="../../assets/imgs/bio.png" alt=""> 
-      <div class="subject-text">Biology</div>
-      </div>     
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-     <img src="../../assets/imgs/lit.png" alt="">
-     <div class="subject-text">Literature</div>
-     </div>
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-      <img src="../../assets/imgs/chem.png" alt="">  
-      <div class="subject-text">Chemistry</div>
-      </div>   
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-     <img src="../../assets/imgs/civic (1).png" alt="">
-     <div class="subject-text">Civic Education</div>
-     </div>
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-      <img src="../../assets/imgs/phy.png" alt=""> 
-      <div class="subject-text">Physics</div>  
-      </div>   
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-     <img src="../../assets/imgs//agr.png" alt="">
-     <div class="subject-text">Agric. Science</div>
-     </div>
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-      <img src="../../assets/imgs/comm.png" alt="">  
-      <div class="subject-text">Commerce</div>   
-      </div> 
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-     <img src="../../assets/imgs/geo.png" alt="">
-     <div class="subject-text">Geography</div>
-     </div>
-    </ion-col>
-    <ion-col col-6 (click)="toSubject()">
-     <div class="subject-box">
-      <img src="../../assets/imgs/govt.png" alt="">  
-      <div class="subject-text">Government</div> 
+      <img src="../../assets/imgs/{{subject.image}}.png" alt=""> 
+      <div class="subject-text">{{subject.subject}}</div>  
       </div>   
     </ion-col>
     </ion-row>
