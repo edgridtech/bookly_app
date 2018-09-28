@@ -4,27 +4,14 @@ page-signup {
     ion-content {
         background-color: $light-background;
         color:$light-text-color;
-        ion-slides {
-            background-color: $light-background;
-            color:$light-text-color;
-            // height: 90%;
-            ion-slide {
-                background-color: $light-background;
-                color:$light-text-color;
-    // padding: 100px 40px 20px 40px !important;
-                // background-color: blanchedalmond;
-                    .manualSlide {
-                        transition-duration: 0ms;
-                        transform: translate3D(-379px,0 0);
-                        margin-left: -379px;
-                    }
+            span {
                     .top-section {
                             // background-color: bisque;
                         .top-step-bar {
                             width: 50%;
                             margin-left: 25%;
                             transition-duration: 0ms;
-                            // margin-top: 54px;
+                            margin-top: 30px;
                             // height: 20px;
                             .first-step {
                                 width: 40%;
@@ -44,25 +31,29 @@ page-signup {
                             }
                         }
                         h3 {
-                            padding: 30px 0 0 0;
+                            padding: 5px 0 0 0;
                             text-align: center;
                             width: 100%;
                         }
                         p {
                             // padding: 10px 0 0 0;
                             text-align: center;
+                            margin: 30px 0;
+                            font-size: 16px;
                             width: 100%;
-                            margin-top: 0px
+                            margin: 0px
                         }
                     }
                     .inputs {
                         padding: 0px 30px;
                         .subjectButton {
-                            padding: 15px 30px;
+                            padding: 15px 0px;
+                            width: 49%;
                             background-color: #fff;
                             border-radius: 30px;
                             border: 1px solid #bdccd5;
-                            margin: 15px 0 0 0
+                            margin: 20px 0 0 0;
+                            font-size: 16px
                         }
                         .EnglishStyle {
                             background-color: #7B4397;
@@ -149,13 +140,17 @@ page-signup {
                     }
                 }
             }
-        }   
         .footer-text {
             color: #67747C;
             text-align: center;
-            margin: 20px 0
+            font-size: 16px;
+            width: 100%;
+            margin: 15px 0
         }
         .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
             display: none
+        }
+        .swipper-wrapper {
+            // height: 90% !important;
         }
 }

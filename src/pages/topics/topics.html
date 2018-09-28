@@ -21,14 +21,14 @@
     </ion-row>
     <ion-row>
       <ion-col *ngFor="let topic of topics; let i = index" col-6 class="topic locked"  (click)="toTopic(topic.title, i)">
-          <div class=" purple">
+          <div class="single" [class]="subject">
+            <img *ngIf="topic.isLocked" src="../../assets/imgs/locked.svg" alt="" width="12px" class="locked-img">
             <span *ngIf="topic.isSearching">
               <img src=".././../assets/imgs/spinner-white.svg" width="20px" class="loader" alt="">
             </span>
             <span *ngIf="!topic.isSearching">
               {{topic.title}}
             </span>
-            <img *ngIf="topic.isLocked" src="../../assets/imgs/locked.svg" alt="" width="12px" class="locked-img">
           </div>
       </ion-col>
     </ion-row>
@@ -38,27 +38,15 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6 class="quiz" (click)="toTopic()">
-        <div class=" purple">
-          WAEC 2012
+      <ion-col *ngFor="let quiz of quizzes; let i = index" col-6 class="quiz" (click)="toQuiz(quiz, i)">
+        <div id="single" [class]="subject">
+            <span *ngIf="quiz.isLoading">
+              <img src=".././../assets/imgs/spinner-white.svg" width="20px" class="loader" alt="">
+            </span>
+            <span *ngIf="!quiz.isLoading">
+              {{quiz.title}}
+            </span>
         </div>
-      </ion-col>
-      <ion-col col-6 class="quiz locked">
-          <div class=" purple">
-            JAMB 2014
-            <!-- <img src="../../assets/imgs/locked.svg" alt="" width="12px" class="locked-img"> -->
-          </div>
-      </ion-col>
-      <ion-col col-6 class="quiz">
-          <div class=" purple">
-            NECO 2010
-          </div>
-      </ion-col>
-      <ion-col col-6 class="quiz locked">
-          <div class=" purple">
-            WAEC 2015
-            <!-- <img src="../../assets/imgs/locked.svg" alt="" width="12px" class="locked-img"> -->
-          </div>
       </ion-col>
     </ion-row>
   </ion-grid>

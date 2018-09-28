@@ -1,75 +1,78 @@
+
+<ion-header>
+  <ion-navbar>
+      <ion-row>
+      <ion-col col-4 class="search">
+        <select [(ngModel)]="class">
+          <option *ngFor="let class of classes" value="m">
+            {{class.class}}
+          </option>
+        </select>
+      </ion-col>
+      <ion-col col-4 class="tab-title" >
+        <b>Profile</b>
+      </ion-col>
+      <ion-col col-4 class="notification">
+        <img src="../../assets/imgs/upgrade.svg" (click)="toNotifications()" width="16px" alt="">
+        <span>
+          Upgrade
+        </span>
+      </ion-col>
+      </ion-row>
+    </ion-navbar>
+  </ion-header>
 <ion-content padding>
   <ion-row class="user-details">
     <img src="../../assets/imgs/uploaded-pic.png" alt=""><br>
     <br><br>
     <p class="full-name">
-      <b>Adewale Williams</b>
+      <b>{{fullname}}</b>
     </p>
     <span class="level">
-      Guru
+      {{achievement}}
     </span>
   </ion-row>
   <div class="sect-title">
     Achievements
   </div>
   <ion-row class="medals">
-      <ion-col col-4>
-        <img src="../../assets/imgs/beginer.png" alt="">
-        <p class="one">Beginer</p>
-      </ion-col>
-      <ion-col col-4>
-        <img src="../../assets/imgs/apprentice.png" alt="">
-        <p class="two">Beginer</p>
-      </ion-col>
-      <ion-col col-4>
-        <img src="../../assets/imgs/practitioner.png" alt="">
-        <p class="three">Practitioner</p>
-      </ion-col>
-      <ion-col col-4>
-        <img src="../../assets/imgs/ninja-inactive.png" alt="">
-        <p class="four">Ninja</p>
-      </ion-col>
-      <ion-col col-4>
-        <img src="../../assets/imgs/guru-inactive.png" alt="">
-        <p class="five">Guru</p>
-      </ion-col>
-      <ion-col col-4>
-        <img src="../../assets/imgs/lord-inactive.png" alt="">
-        <p class="six">Lord</p>
+      <ion-col col-4 *ngFor="let achievement of achievements; let i = index">
+        <img [src]="'../../assets/imgs/'+achievement.name+''+achievement.active+'.svg'" alt="">
+        <p [class]="achievement.class">{{achievement.name}}</p>
       </ion-col>
   </ion-row>
-    <div class="sect-title">
+    <!-- <div class="sect-title">
       Downloads
     </div>
   <ion-row class="app-settings">
       <p>
         View downloads
-        <i class="fa fa-angle-right"></i>
+        <img src="../../assets/imgs/front.svg" width="10px;" alt="">
       </p>
       <p>
         Edit Preferences
-        <i class="fa fa-angle-right"></i>
+        <img src="../../assets/imgs/front.svg" width="10px;" alt="">
       </p>
-  </ion-row>
+  </ion-row> -->
   <div class="sect-title settings">
     Settings
   </div>
   <ion-row class="app-settings-two">
       <p>
         Edit Profile
-        <i class="fa fa-angle-right"></i>
+        <img src="../../assets/imgs/front.svg" width="8px;" alt="">
       </p>
       <p>
         Change Subjects
-        <i class="fa fa-angle-right"></i>
+        <img src="../../assets/imgs/front.svg" width="8px;" alt="">
       </p>
       <p>
         Add Class
-        <i class="fa fa-angle-right"></i>
+        <img src="../../assets/imgs/front.svg" width="8px;" alt="">
       </p>
       <p>
         About
-        <i class="fa fa-angle-right"></i>
+        <img src="../../assets/imgs/front.svg" width="8px;" alt="">
       </p>
       <p class="logout">
         Logout

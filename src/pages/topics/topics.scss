@@ -28,7 +28,7 @@ page-topics {
                 line-height: 80px;
                 text-align: center;
                 height: 120px;
-                font-size: 20px;
+                font-size: 22px;
                 // font-weight: 600;
                 color: #fff;
             }
@@ -52,26 +52,25 @@ page-topics {
                 .sect-title {
                     color: #67747C;
                     padding: 20px  0 10px 0;
-                    font-size: 13px
+                    font-size: 20px
                 }
                 ion-col {
                     padding: 40px;
                     border-radius: 4px;
                 }
                 .quiz {
-                    font-size: 12px;
                     text-align: center;
                     margin: 5px 0;
                     line-height: 50px;
-                    font-size: 12px !important;
+                    font-size: 14px !important;
                     color:#fff;
                 }
                 .topic {
                     // background-color: #19956b;
                     text-align: center;
                     margin: 5px 0;
-                    line-height: 50px;
-                    font-size: 14px !important;
+                    line-height: 60px;
+                    font-size: 17px !important;
                     color:#fff;
                     .locked-row {
                         height: 20px;
@@ -87,24 +86,88 @@ page-topics {
                     background-color: #667EEA;
                     border-radius: 8px !important;
                 }
-                .purple {
+                .Agric {
+                    border-radius: 4px !important;
+                    background-color: #52C234;
+                    height: 50px;
+                }
+                .Chemistry {
+                    border-radius: 4px !important;
+                    background-color: #1E3C72;
+                    height: 50px;
+                }
+                .Civic {
+                    border-radius: 4px !important;
+                    background-color: #D7816A;
+                    height: 50px;
+                }
+                .Commerce {
+                    border-radius: 4px !important;
+                    background-color: #667EEA;
+                    height: 50px;
+                }
+                .Economics {
+                    border-radius: 4px !important;
+                    background-color: #A71D31;
+                    height: 50px;
+                }
+                .Biology {
+                    border-radius: 4px !important;
                     background-color: #764BA2;
+                    height: 50px;
+                }
+                .English-Language {
+                    border-radius: 4px !important;
+                    background-color: #DC2430;
+                    height: 50px;
+                }
+                .Geography {
+                    border-radius: 4px !important;
+                    background-color: #834D9B;
+                    height: 50px;
+                }
+                .Government {
+                    border-radius: 4px !important;
+                    background-color: #FF6B6B ;
+                    height: 50px;
+                }
+                .Literature {
+                    border-radius: 4px !important;
+                    background-color: #30CFD0;
+                    height: 50px;
+                }
+                .Mathematics {
+                    border-radius: 4px !important;
+                    background-color: #606C88;
+                    height: 50px;
+                }
+                .Physics {
+                    border-radius: 4px !important;
+                    background-color: #A73737;
+                    height: 50px;
+                    // .loader {
+                    //     margin-top: 12px;
+                    //     animation: spin;
+                    //     animation-duration: 2000ms;
+                    //     animation-iteration-count: infinite;
+                    //     animation-timing-function: linear;
+                    // }
+                }
+                #single {
                     border-radius: 4px !important;
                     padding: 0 10px;
                     white-space: nowrap;
+                    height: 50px;
+                    line-height: 60px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     span {
                         width: 95%;
                         overflow: hidden;
-                        .loader {
-                            margin-top: 10px;
-                            animation: spin;
-                            animation-duration: 2000ms;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: linear;
-                        }
                     }
+                } 
+                .quiz-text {
+                    margin: 10px 0;
                 }
                 .dark {
                     background-color: #3B444F;
@@ -112,12 +175,19 @@ page-topics {
                 }
                 .locked-img {
                     position: relative;
-                    top: -9px;
-                    right: -5px;
+                    top: 0px;
+                    left: 0px;
                     // margin: -20px 0 0 3px;
                 }
             }
         }
+    }
+    .loader {
+        margin-top: 12px;
+        animation: spin;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 }
 

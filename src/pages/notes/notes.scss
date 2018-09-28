@@ -4,7 +4,8 @@ page-notes {
         // margin: 30px 0 0 0;
         ion-navbar {
             .tab-title {
-                text-align: center
+                text-align: center;
+                margin: 10px 0 0 0;
             }
             .add {
                 text-align: right
@@ -25,7 +26,7 @@ page-notes {
         }
     }
     .not-empty {
-        margin-top: 40px;
+        margin-top: 60px;
         // background-color: aqua;
         ion-row {
             padding: 10px;
@@ -38,16 +39,49 @@ page-notes {
                     border-radius: 8px;
                     color: #fff;
                     height: 123px;
+                    ion-checkbox {
+                        float: right;
+                        border: 0 !important
+                    }
                     .time {
-                        font-size: 10px;
+                        font-size: 13px;
                         width: 30px;
-                        border-bottom: 1px solid #fff
+                        border-bottom: 1px solid #fff;
                     }
                     p {
-                        font-size: 12px
+                        font-size: 16px
                     }
                 }
             }
         }
+    }
+    .addNotes {
+        margin: 80px 0;
+        padding: 0 20px;
+        label {
+            font-size: 18px
+        }
+        input {
+            width: 100%;
+            height: 35px;
+            // margin: 10px 0 0 0;
+            border: 0;
+            border-bottom: 0.3px solid #e2e2e2;
+            ::-webkit-input-placeholder {
+                color: #3B444F;
+                font-size: 14px
+            }
+        }
+    }
+    .outline-btn {
+        color: #045DE9;
+        width: 80px;
+        background-color: #fff;
+        border: 1px solid #045DE9;
+        height: 30px;
+        border-radius: 40px;
+    }
+    .checkbox-md .checkbox-icon {
+        border: 0 !important
     }
 }

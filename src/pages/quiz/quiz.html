@@ -1,0 +1,101 @@
+<ion-content padding *ngIf="quizActive">
+  <ion-row class="top">
+    <ion-col col-2 class="close" (click)="openModal()">
+      <img src=".././../assets/imgs/x.svg" alt="" width="20px;">
+    </ion-col>
+    <ion-col col-8 class="bar">
+      <div class="progress-bar" [ngStyle]="progress">
+      </div>
+    </ion-col>
+    <ion-col col-2 class="counts">
+      <span>{{questionNo + 1}} / {{questionCount}}</span>
+    </ion-col>
+  </ion-row>
+<div class="container" *ngFor="let question of nonsense; let i = index">
+    <p class="question">
+        <b>{{bundle[0]}}</b>
+      </p>
+      <ion-row class="options">
+        <button (click)="pick(1)" [ngStyle]="myStyle1">
+          {{bundle[1].a}}
+        </button>
+        <button (click)="pick(2)" [ngStyle]="myStyle2">
+            {{bundle[1].b}}
+        </button>
+        <button (click)="pick(3)" [ngStyle]="myStyle3">
+            {{bundle[1].c}}
+        </button>
+        <button (click)="pick(4)" [ngStyle]="myStyle4">
+            {{bundle[1].d}}
+        </button>
+      </ion-row>
+</div>
+  <ion-row>
+    <button class="login-btn" (click)="next()" [disabled]="isDisabled">
+      Next
+    </button>
+  </ion-row>
+  <span *ngIf="myModal" class="myModal">
+  <div class="modal" (click)="closeModal()"></div>
+  <div class="modal-content">
+    <p class="loud">
+      Are you sure you want to cancel the quiz?
+    </p>
+    <p class="silent">
+      All your progress will be lost
+    </p>
+    <button class="no" (click)="closeModal()">
+      No, Go Back
+    </button>
+    <button class="yes" (click)="goBack()">
+      Yes, Cancel
+    </button>
+  </div>
+</span>
+</ion-content>
+<ion-content *ngIf="!quizActive">
+  <ion-row class="header">
+    <ion-col col-3 class="back" (click)="goBack()">
+      <img src="../../assets/imgs/back-dark.svg" alt="" width="8px">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+        <img src="../../assets/imgs/trophy.svg" alt="" class="trophy" *ngIf="medal === 1">
+        <img src="../../assets/imgs/sec-trophy.svg" alt="" class="trophy" *ngIf="medal === 2">
+        <img src="../../assets/imgs/third.svg" alt="" class="trophy" *ngIf="medal === 3">
+        <img src="../../assets/imgs/forth.svg" alt="" class="trophy" *ngIf="medal === 4">
+        <img src="../../assets/imgs/last.svg" alt="" class="trophy" *ngIf="medal === 5">
+    </ion-col>
+    <ion-col col-12 class="congrats">
+      {{congratsMessage}}
+    </ion-col>
+    <ion-col col-12 class="score">
+      <b>{{correctAnswerCount}}</b> / {{questionCount}}
+    </ion-col>
+    <ion-col col-12 class="showAnswers">
+      <ion-list>
+        <ion-list-header (click)="toggleDetails()">
+          Show Answers<i [class]="icon"></i>
+        </ion-list-header>
+        <ion-item padding *ngIf="showAnswers">
+          <div class="each"  *ngFor="let each of answersPayload">
+          Question: <br>{{each.question}} <br><br>
+          <!-- Answer: <br> -->
+          <b>{{each.answer}}</b> 
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+    <button class="login-btn2" (click)="goBack()">
+      Continue
+    </button>
+    </ion-col>
+    <ion-col col-12 (click)="retake()">
+      <img src="../../assets/imgs/rewind.svg" alt="" width="15px"><span>Retake Quiz</span>
+    </ion-col>
+  </ion-row>
+</ion-content>

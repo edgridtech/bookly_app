@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import { SingleTopicPage } from '../single-topic/single-topic';
 import { MyServiceProvider } from '../../providers/my-service/my-service'
+import { QuizPage } from '../quiz/quiz';
 
 /**
  * Generated class for the TopicsPage page.
@@ -26,6 +27,9 @@ export class TopicsPage {
   public topics: any
   public isSearching: Boolean
   public topImg: string
+  public quizzes: any
+  public subjectQuery: string
+  public test: any
   // Subscription: Subscription;
   constructor(
     public navCtrl: NavController,
@@ -34,13 +38,16 @@ export class TopicsPage {
     public myService: MyServiceProvider,
     public http: Http
     ) {
+      this.test = navParams.get("selectedSubject")
       this.topics = navParams.get("selectedSubject").topics
       this.topImg = navParams.get("selectedSubject").image
       this.subject = navParams.get("selectedSubject").subject
+      this.subjectQuery = navParams.get("selectedSubject").value
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TopicsPage');
+    console.log(this.test)
     // this.topics = [
     //   { title: 'Reproductive System', isLocked: false, isSearching: false },
     //   { title: 'Circulatory System', isLocked: true, isSearching: false },
@@ -49,13 +56,22 @@ export class TopicsPage {
     //   { title: 'Plant Biology', isLocked: false, isSearching: false },
     // ]
     this.globals.headerOpen = false
-    console.log(this.globals.headerOpen)
+    this.quizzes = [
+      { title: 'WASSCE', year: '2011', isLoading: false },
+      { title: 'UTME', year: '2002', isLoading: false },
+      // { title: 'WAEC', year: '2003', isLoading: false },
+      // { title: 'WAEC', year: '2004', isLoading: false },
+      // { title: 'WASSCE', year: '2005', isLoading: false },
+      // { title: 'WAEC', year: '2006', isLoading: false },
+      // { title: 'WAEC', year: '2007', isLoading: false }
+    ]
+    // console.log(this.globals.headerOpen)
   }
   ionViewWillEnter() {
-    console.log('ionViewWillEnter');
+    // console.log('ionViewWillEnter');
     this.globals.headerOpen = false
     this.isSearching = false
-    console.log(this.globals.headerOpen)
+    // console.log(this.globals.headerOpen)
 
   }
   toTopic(e, i) {
@@ -87,5 +103,20 @@ export class TopicsPage {
   goBack() {
     this.navCtrl.pop()
   }
-
+  toQuiz(quizDetails, i) {
+    this.quizzes[i].isLoading = true
+    let options = {
+      subject: this.subjectQuery,
+      // year: quizDetails.year,
+      // type: quizDetails.title
+    }
+    console.log(options)
+    let url = 'https://questions.aloc.ng/api/m'
+    this.http.get(url, {params: options})
+    .subscribe(data => {
+      console.log(data)
+      this.quizzes[i].isLoading = false
+      this.navCtrl.push(QuizPage, {data})
+    })
+  }
 }

@@ -12,57 +12,75 @@
 
 
 <ion-content>
-    <ion-slides pager>
-      <ion-slide class="single-slide" [class.manualSlide]="swipeTrue">
-        <ion-row class="top-section">
-          <div class="top-step-bar">
-            <span><button class="first-step"></button></span>
-            <span><button class="second-step"></button></span>
+    <!-- <ion-slides pager>
+      <ion-slide class="single-slide" [class.manualSlide]="swipeTrue"> -->
+        <span *ngIf="one">
+          <ion-row class="top-section">
+            <div class="top-step-bar">
+              <span><button class="first-step"></button></span>
+              <span><button class="second-step"></button></span>
+            </div>
+            <!-- <h3><b>Prep for Tests & Exams</b></h3> -->
+            <h3><b>Get Started</b></h3>
+            <p>Enter your details below to get started</p>
+          </ion-row>
+          <ion-row>
+          <div class="inputs">
+            <input type="text" placeholder="Username" [(ngModel)]="username" class="normal-input"><br>
+            <select name="class" id="" [(ngModel)]="class" (ngModelChange)="onChange($event)">
+              <option *ngFor="let class of classes" [ngValue]="class">{{class}}</option>
+              <!-- <option>SS2</option>
+              <option>SS3</option> -->
+            </select>
+            <span>
+              <button class="append-button-rounded">+234</button>
+            </span>
+            <span>
+              <input type="text" placeholder="Phone Number" [(ngModel)]="phoneNo" class="append-input-rounded"><br>
+            </span>  
+            <span>
+              <button class="prepend-button-rounded-transparent">
+                <i class="fa fa-eye"></i>
+              </button>
+            </span>
+            <span>
+              <input type="text" [(ngModel)]="password" placeholder="Password" class="prepend-input-rounded"><br>
+            </span>  
           </div>
-          <!-- <h3><b>Prep for Tests & Exams</b></h3> -->
-          <h3><b>Get Started</b></h3>
-          <p>Enter your details below to get started</p>
-        </ion-row>
-        <ion-row>
-        <div class="inputs">
-          <input type="text" placeholder="Username" class="normal-input"><br>
-          <select name="class" id="">
-            <option>SS1</option>
-            <option>SS2</option>
-            <option>SS3</option>
-          </select>
-          <span><button class="append-button-rounded">+234</button></span><span><input type="text" placeholder="Phone Number" class="append-input-rounded"><br></span>  
-          <span><button class="prepend-button-rounded-transparent"><i class="fa fa-eye"></i></button></span><span><input type="text" placeholder="Password" class="prepend-input-rounded"><br></span>  
-        </div>
-        </ion-row>
-        <ion-row class="buttons block">
-            <button ion-button round (click)="continue()"><b>Continue</b></button>
-        </ion-row>
-      </ion-slide>
-      <ion-slide class="single-slide">
-        <ion-row class="top-section">
-          <div class="top-step-bar">
-            <span><button class="second-step"></button></span>
-            <span><button class="first-step"></button></span>
+          </ion-row>
+          <ion-row class="buttons block">
+              <button ion-button round (click)="continue()"><b>Continue</b></button>
+              <div class="footer-text">Already have an account? <b (click)="toLogin()">Login</b></div>
+          </ion-row>
+        </span>
+      <!-- </ion-slide>
+      <ion-slide class="single-slide"> -->
+        <span *ngIf="!one">
+          <ion-row class="top-section">
+            <div class="top-step-bar">
+              <span><button class="first-step"></button></span>
+              <span><button class="first-step"></button></span>
+            </div>
+            <!-- <h3><b>Prep for Tests & Exams</b></h3> -->
+            <h3><b>Awesome</b></h3>
+            <p>Now, select your subjects</p>
+          </ion-row>
+          <ion-row>
+          <div class="inputs">
+            <span *ngFor="let subject of subjects; let i=index">
+              <button class="subjectButton {{subject.value}}" outline (click)="active(i)">{{subject.subject}}</button>
+            </span>
           </div>
-          <!-- <h3><b>Prep for Tests & Exams</b></h3> -->
-          <h3><b>Awesome</b></h3>
-          <p>Now, select your subjects</p>
-        </ion-row>
-        <ion-row>
-        <div class="inputs">
-          <span *ngFor="let subject of subjects; let i=index">
-            <button class="subjectButton {{subject.value}}" outline (click)="active(i)">{{subject.subject}}</button>
-          </span>
-        </div>
-        </ion-row>
-        <ion-row class="buttons block">
-            <button ion-button round (click)="signup()"><b>Finsh</b></button>
-        </ion-row>
-      </ion-slide>
-    </ion-slides>
-    <ion-grid>
-      <span class="footer-text">Already have an account? <b (click)="toLogin()">Login</b></span>
-    </ion-grid>
+          </ion-row>
+          <ion-row class="buttons block">
+              <button ion-button round (click)="signup()"><b>Finsh</b></button>
+              <div class="footer-text">Already have an account? <b (click)="toLogin()">Login</b></div>
+          </ion-row>
+        </span>
+      <!-- </ion-slide>
+    </ion-slides> -->
+    <!-- <ion-grid>
+      
+    </ion-grid> -->
   </ion-content>
   

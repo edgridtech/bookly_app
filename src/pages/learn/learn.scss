@@ -4,12 +4,12 @@ page-learn {
         margin: 45px 0 0 0;
         .tab-top-title{
             color: #3B444F;
-            font-size: 13px;
-            margin: 15px 0 0 0;
+            font-size: 20px;
+            margin: 25px 0 0 0;
             margin: 15px 12px 0 12px;
             .view-all {
                 color: #045DE9;
-                font-size: 12px;
+                font-size: 15px;
                 margin-top: -15px;
                 width: 50%;
                 line-height: 10px;
@@ -32,9 +32,10 @@ page-learn {
             }
             .prev-subject{
                 height: 40px;
-                width: 99%;
+                width: 90%;
+                margin: 0;
                 text-align: center;
-                font-size: 11px !important;
+                font-size: 15px !important;
                 color: #fff;
                 border-radius: 5px;
             }
@@ -48,7 +49,7 @@ page-learn {
         .subjects {
             margin: 0px 0 55px 0;
             .subj-title {
-                font-size: 13px;
+                font-size: 20px;
                 color: #3B444F;
             }
             ion-col {
@@ -73,8 +74,8 @@ page-learn {
                         height: 120px;
                         width: 100%;
                         text-align: center;
-                        margin-top: -75px;
-                        font-size: 12px;
+                        margin-top: -70px;
+                        font-size: 17px;
                     }
                 }
             }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/global/global'
+import { TextbookPage } from '../textbook/textbook';
 
 @Component({
   selector: 'page-library',
@@ -25,6 +26,10 @@ export class LibraryPage {
     this.globals.headerOpen = true
     console.log(this.globals.headerOpen)
 
+  }
+
+  toBook() {
+    this.navCtrl.push(TextbookPage)
   }
 
 }

@@ -1,12 +1,35 @@
 page-profile {
+    ion-header {
+        ion-navbar {
+            .tab-title {
+                margin: 10px 0 0 0;
+            }
+            ion-col {
+                select {
+                    border: 0.4px solid rgb(247, 247, 247) !important;
+                    margin: 7px 0 0 0;
+                    padding: 5px 10px;
+                }
+                img {
+                    margin: 10px 0 0 0
+                }
+                span {
+                    position: relative;
+                    top: -10px;
+                    padding: 0 0 0 5px;
+                    color: #67747C
+                }
+            }
+        }
+    }
     ion-content {
-        margin: 60px 0;
-        padding: 30px !important;
+        // padding: 60px 0;
+        padding: 60px 30px !important;
         .user-details {
             text-align: center;
             align-items: center;
             align-content: center;
-            margin: 20px 0 40px 0;
+            margin: 40px 0 40px 0;
             img {
                 width: 30% !important;
                 margin: 0 35%;
@@ -27,18 +50,22 @@ page-profile {
         }
         .medals {
             ion-col {
+                // align-items: center;
+                text-align: center;
                 img {
                     // width: 30% !important;
-                    margin-left:35% !important;
+                    height: 40px;
+                    // margin: 0 auto;
                     margin-top: 10px;
                 }
                 p {
                     width: 100%;
+                    font-size: 16px;
                     text-align: center;
-                    color: #67747C
+                    color: #DBE6EC
                 }
                 .one {
-                    color: #20BF55 !important
+                    color: #20BF55 !important;
                 }
                 .two {
                     color: #FC575E !important
@@ -46,15 +73,15 @@ page-profile {
                 .three {
                     color: #A71D31 !important
                 }
-                // .four {
-                //     color: #FC575E !important
-                // }
-                // .five {
-                //     color: #20BF55 !important
-                // }
-                // .six {
-                //     color: #FC575E !important
-                // }
+                .four {
+                    color:#764BA2 !important
+                }
+                .five {
+                    color: #045DE9 !important
+                }
+                .six {
+                    color: #F8C51C !important
+                }
             }
         }
         .sect-title {
@@ -79,6 +106,9 @@ page-profile {
             .fa {
                 float: right;
             }
+            img {
+                float: right;
+            }
         }
     }
     .app-settings-two {
@@ -87,8 +117,11 @@ page-profile {
         p {
             color: #67747C;
             width: 100%;
-            font-size: 14px;
+            font-size: 16px;
             .fa {
+                float: right;
+            }
+            img {
                 float: right;
             }
         }

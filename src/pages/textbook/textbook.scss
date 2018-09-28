@@ -1,0 +1,25 @@
+page-textbook {
+    margin: 0px 0 0 0px;
+    ion-header {
+        ion-navbar {
+            ion-row {
+                ion-col {
+                    input {
+                        width: 100%;
+                        border: 0;
+                        border: 1px solid #eee;
+                        border-radius: 30px;
+                        height: 30px;
+                        padding-right: 20px;
+                        ::-moz-placeholder {
+                            margin: 0 0 0 20px
+                        }
+                        ::placeholder {
+                            margin: 0 0 0 20px
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

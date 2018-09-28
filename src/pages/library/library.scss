@@ -1,12 +1,14 @@
 page-library {
-    margin: 0 0 65px 0;
+    margin: 20px 0 65px 0;
     ion-content {
         margin: 40px 0 40px 0;  
+        margin-bottom: 60px !important;
         ion-row {
             padding: 15px;
+            margin: -10px 0 45px 0;
             overflow: auto;
             p {
-                font-size: 14px;
+                font-size: 20px;
                 color: #3B444F;
             }
             ion-slides {
@@ -14,27 +16,37 @@ page-library {
                     height: 300px;
                         overflow: hidden;
                         z-index: 10000000;
+                    ion-col {
+                        text-align: center;
+                        img {
+                            width: 100%;
+                            // margin-left: -10px;
+                        }
+                    }
                     .locked {
                         img {
                             opacity: 0.3;
-                            background-color: #000
+                            background-color: #000;
+                            margin: 0 0 0 -5px;
+                            z-index: 10;
                         }
                     }
                     ion-col {
                         text-align: center;
                         margin: 15px 0 0 0 !important;
-                        border-radius: 8px !important;
+                        // border-radius: 8px !important;
                         height: 250px !important;
                         img {
-                            width: 80%;
-                            position: relative;
-                            top: 0;
+                            // width: 80%;
+                            // position: relative;
+                            // top: 0;
+                            margin: 0 0 0 -5px;
                             z-index: 10;
                             // margin-left: 5%
                         }
                         .book-name {
-                            font-size: 12px;
-                            color: #67747C
+                            font-size: 15px;
+                            color: #67747C;
                         }
                         .lock {
                             position: relative;

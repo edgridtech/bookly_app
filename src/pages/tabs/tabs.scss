@@ -1,11 +1,17 @@
 page-tabs {
     ion-header {
         ion-navbar {
+            .tab-title {
+                margin: 10px 0 0 0;
+            }
             ion-col {
-                .fa {
-                    font-size: 18px !important
+                    img {
+                        margin: 10px 0 0 0
                 }
             }
         }
+    }
+    .tabs-md .tab-button[aria-selected=true] {
+        color: #045DE9 !important
     }
 }

@@ -1,8 +1,17 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+// import { LoginPage } from '../login/login';
 import { AlertController } from 'ionic-angular';
+import { LearnPage } from '../learn/learn';
+import { TabsPage } from '../tabs/tabs';
+import { LoginPage } from '../login/login';
 
+//NGRX imports
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { INCREMENT, DECREMENT, RESET } from '../../store/counter';
+import { AppState } from '../../app.state';
+import * as userActons from '../../store/actions/user.actions'
 /**
  * Generated class for the SignupPage page.
  *
@@ -20,58 +29,96 @@ export class SignupPage {
   btnClass: any
   isActive: Boolean
   classes: any
+  class: string
+  public username: string
+  public phoneNo: number
+  public password: string
   swipeTrue: Boolean
+  public one: Boolean
+  selectedSubjectsDetails: any
+  userDetails: any
   // manualSlide: {}
   constructor( 
-    public navCtrl: NavController, public navParams: NavParams,
-    public alertCtrl: AlertController
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    private store: Store<AppState>
     ) {
+      store.select('userDetails').subscribe(test => {
+        this.userDetails = test[0]
+      })
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
-    this.subjects = [
-      {subject: 'English Language', value:  ''  ,style: 'EnglishStyle', seleted: true},
-      {subject: 'Literature', value:  ''  ,style: 'LitStyle', seleted: false},
-      {subject: 'Biology', value:  ''  ,style: 'BioStyle', seleted: false},
-      {subject: 'Civic Education', value:  ''  ,style: 'CivStyle', seleted: false},
-      {subject: 'Agricultural Science', value:  ''  ,style: 'AgricStyle', seleted: false},
-      {subject: 'Mathematics', value:  ''  ,style: 'MathStyle', seleted: true},
-      {subject: 'Chemistry', value:  ''  ,style: 'ChemStyle', seleted: false},
-      {subject: 'Geography', value:  ''  ,style: 'GeoStyle', seleted: false},
-      {subject: 'Physics', value:  ''  ,style: 'PhyStyle', seleted: false},
-      {subject: 'Commerce', value:  ''  ,style: 'CommStyle', seleted: false},
-      {subject: 'Economics', value:  ''  ,style: 'EcoStyle', seleted: false}
+    // console.log('ionViewDidLoad SignupPage');
+    this.selectedSubjectsDetails = []
+    this.one = true
+    this.username = ''
+    this.subjects = this.userDetails.subjects
+    this.classes = [
+      'ss1', 'ss2', 'ss3'
     ]
-    // this.classes = [
-    //   'ss1', 'ss2', 'ss3'
-    // ]
     this.swipeTrue  = false
     this.isActive = false
+    this.active (0)
+    this.active (1)
     // this.btnClass = 'subjectButton'
-    console.log(this.subjects)
+    console.log(this.userDetails)
   }
   active (i) {
     // this.isActive = !this.isActive
-    this.subjects[i].seleted = !this.subjects[i].seleted
+    this.subjects[i].selected = !this.subjects[i].selected
     // }
-    if (this.subjects[i].seleted === true) {
+    if (this.subjects[i].selected === true) {
       this.subjects[i].value = this.subjects[i].style    
     } 
-    if (this.subjects[i].seleted === false) {
+    if (this.subjects[i].selected === false) {
       this.subjects[i].value = ''
     }
   }
   continue () {
-    this.swipeTrue = !this.swipeTrue
-    console.log(this.swipeTrue)
+    this.one = false
+    // this.swipeTrue = !this.swipeTrue
+    // console.log(this.swipeTrue)
+  }
+  onChange(data) {
+    this.class = data
+    console.log(data)
   }
   signup () {
-    this.showAlert()
+    // this.showAlert()
+    let data = {
+      username: this.username,
+      class: this.class,
+      password: this.password,
+      phoneNo: this.phoneNo
+    }
+    // console.log(data)
+    this.store.dispatch(new userActons.ChangeName(
+      data.username 
+    ))
     let selectedSubjects = this.subjects.filter(subject => {
       return subject.value != ''
     })
-    console.log(selectedSubjects)
+    if (selectedSubjects.length !== 0) {
+      selectedSubjects = selectedSubjects
+      console.log(this.userDetails)
+      selectedSubjects.forEach(instance => {
+        let test = this.userDetails.subjectDetails.filter(subject => {
+          return subject.subject === instance.subject
+        })
+        this.selectedSubjectsDetails.push(...test)
+        // console.log(instance)
+        console.log(this.userDetails)
+      })
+    } else {
+      selectedSubjects = []
+    }
+    this.store.dispatch(new userActons.AddSubjects(
+      this.selectedSubjectsDetails  
+    ))
+    // console.log(selectedSubjects)
+    this.navCtrl.push(TabsPage)
   }
   toLogin () {
     this.navCtrl.push(LoginPage)

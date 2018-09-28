@@ -30,6 +30,21 @@ import { SingleTopicPage } from '../pages/single-topic/single-topic';
 import { TopicTextPage } from '../pages/topic-text/topic-text';
 import { TopicVideoPage } from '../pages/topic-video/topic-video';
 import { TopicQuizPage } from '../pages/topic-quiz/topic-quiz';
+import { QuizPage } from '../pages/quiz/quiz';
+import { SampleModalPage } from '../pages/sample-modal/sample-modal';
+import { TextbookPage } from '../pages/textbook/textbook';
+
+//Plugins
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PdfJsViewerModule } from 'ng2-pdfjs-viewer';
+
+//NGRX imports
+import { StoreModule } from '@ngrx/store';
+import { reducer } from '../store/reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+// import { environment } from '../en';
+
+
 
 @NgModule({
   declarations: [
@@ -52,14 +67,24 @@ import { TopicQuizPage } from '../pages/topic-quiz/topic-quiz';
     TopicsSearchResultsPage,
     NotesSearchResultsPage,
     SingleTopicPage,
+    QuizPage,
     TopicTextPage,
     TopicVideoPage,
-    TopicQuizPage
+    TopicQuizPage,
+    SampleModalPage,
+    TextbookPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    PdfViewerModule,
+    PdfJsViewerModule,
+    IonicModule.forRoot(MyApp),
+    StoreModule.forRoot({ userDetails: reducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      // logOnly: environment.production, // Restrict extension to log-only mode
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -82,9 +107,12 @@ import { TopicQuizPage } from '../pages/topic-quiz/topic-quiz';
     TopicsSearchResultsPage,
     NotesSearchResultsPage,
     SingleTopicPage,
+    QuizPage,
     TopicTextPage,
     TopicVideoPage,
-    TopicQuizPage
+    TopicQuizPage,
+    SampleModalPage,
+    TextbookPage
     
   ],
   providers: [
